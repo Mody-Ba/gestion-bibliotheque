@@ -1,35 +1,31 @@
 package com.Bibiloteque.gestionBiblio.entity;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
 public class BookList {
-    public static LivreEntity CLEAN_CODE = new LivreEntity(
+    public static Livre CLEAN_CODE = new Livre(
             "Clean Code",
             "978-0132350884",
-            2008,
-            true,
-            null,          // auteur
-            null           // bibliotheque
+            LocalDate.of(2008, 1, 1),
+            true
+
     );
 
-    public static LivreEntity EFFECTIVE_JAVA = new LivreEntity(
+    public static Livre EFFECTIVE_JAVA = new Livre(
             "Effective Java",
             "978-0134685991",
-            2018,
-            true,
-            null,
-            null
+            LocalDate.of(2008, 4, 1),
+            true
     );
-    public static LivreEntity DESIGN_PATTERNS = new LivreEntity(
+    public static Livre DESIGN_PATTERNS = new Livre(
             "Design Patterns",
             "978-0201633610",
-            1994,
-            false,
-            null,
-            null
+            LocalDate.of(2008, 2, 1),
+            false
     );
 
-    public static final List<LivreEntity> ALL =
+    public static final List<Livre> ALL =
             Arrays.asList(CLEAN_CODE, EFFECTIVE_JAVA, DESIGN_PATTERNS);
 }

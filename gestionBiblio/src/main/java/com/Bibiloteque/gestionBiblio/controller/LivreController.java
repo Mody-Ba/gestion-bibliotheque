@@ -1,6 +1,7 @@
 package com.Bibiloteque.gestionBiblio.controller;
 
 import com.Bibiloteque.gestionBiblio.entity.BookList;
+import com.Bibiloteque.gestionBiblio.entity.BooksToRegister;
 import com.Bibiloteque.gestionBiblio.entity.Livre;
 import com.Bibiloteque.gestionBiblio.entity.LivreEntity;
 import com.Bibiloteque.gestionBiblio.service.BookService;
@@ -56,12 +57,12 @@ public class LivreController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Created titre",
                     content = {@Content(mediaType = "application/json",
-                            schema = @Schema(implementation = Livre.class))})
+                            schema = @Schema(implementation = BooksToRegister.class))})
 
     })
     @PostMapping
-    public Livre createLivre(@RequestBody @Valid Livre livre) {
-        return livre;
+    public Livre createLivre(@RequestBody @Valid BooksToRegister booksToRegister) {
+        return bookService.createLivre(booksToRegister);
     }
 
     @Operation(summary = "Updates a titre", description = "Updates a titre")

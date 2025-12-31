@@ -24,6 +24,8 @@ public class LivreEntity {
     @Column(nullable = false)
     private boolean disponible;
 
+    private int classement;
+
     @ManyToOne
     @JoinColumn(name = "auteur_id")
     private Auteur auteur;
@@ -44,6 +46,7 @@ public class LivreEntity {
                        String isbn,
                        int annePublication,
                        boolean disponible,
+                       int classement,
                        Auteur auteur,
                        Bibliotheque bibliotheque) {
 
@@ -51,6 +54,7 @@ public class LivreEntity {
         this.isbn = isbn;
         this.annePublication = annePublication;
         this.disponible = disponible;
+        this.classement=classement;
         this.auteur = auteur;
         this.bibliotheque = bibliotheque;
     }
@@ -84,6 +88,15 @@ public class LivreEntity {
 
     public int getAnnePublication() {
         return annePublication;
+
+    }
+
+    public int getClassement() {
+        return classement;
+    }
+
+    public void setClassement(int classement) {
+        this.classement = classement;
     }
 
     public void setAnnePublication(int annePublication) {

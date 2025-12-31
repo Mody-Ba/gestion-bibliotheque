@@ -11,6 +11,7 @@ public record Livre(
         @NotBlank String titre,
         @NotBlank String isbn,
         @PastOrPresent LocalDate anneePublication,
-        @NotNull boolean disponible
+        @NotNull boolean disponible,
+        Classement classement
 ) {}
 

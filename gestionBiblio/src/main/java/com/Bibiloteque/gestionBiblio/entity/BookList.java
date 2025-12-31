@@ -9,7 +9,8 @@ public class BookList {
             "Clean Code",
             "978-0132350884",
             LocalDate.of(2008, 1, 1),
-            true
+            true,
+            new Classement(1,10)
 
     );
 
@@ -17,13 +18,15 @@ public class BookList {
             "Effective Java",
             "978-0134685991",
             LocalDate.of(2008, 4, 1),
-            true
+            true,
+            new Classement(2,9)
     );
     public static Livre DESIGN_PATTERNS = new Livre(
             "Design Patterns",
             "978-0201633610",
             LocalDate.of(2008, 2, 1),
-            false
+            false,
+            new Classement(3,8)
     );
 
     public static final List<Livre> ALL =
